@@ -1,0 +1,37 @@
+.bottom-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 64px;
+  background: #fff;
+  box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 24px 24px 0 0;
+  z-index: 1000;
+  margin: 0 auto;
+  max-width: 500px;
+  width: 100vw;
+}
+
+.nav-icon {
+  color: #1b4965;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  transition: color 0.2s;
+}
+
+.nav-icon.active {
+  color: #76c6c5;
+}
+
+@media (min-width: 768px) {
+  .bottom-nav {
+    display: none;
+  }
+}

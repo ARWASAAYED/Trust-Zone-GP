@@ -1,0 +1,271 @@
+/* Root and container */
+.favorite-places-root {
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  background: #f7f8fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.favorite-places-container {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px 16px 32px 16px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh;
+}
+
+.favorite-places-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+  color: #23405b;
+}
+
+.favorite-places-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  position: relative;
+}
+
+.favorite-places-state {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  z-index: 2;
+  font-size: 1.1rem;
+  color: #a23701;
+  text-align: center;
+  border-radius: 12px;
+}
+.favorite-places-loading {
+  color: #1b4965;
+}
+.favorite-places-error {
+  color: #a23701;
+}
+.favorite-places-empty {
+  color: #888;
+}
+
+.favorite-places-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  overflow-y: auto;
+  padding-right: 4px;
+  max-height: 60vh;
+}
+
+.favorite-place-card {
+  display: flex;
+  align-items: center;
+  background: #f3f3f6;
+  border-radius: 16px;
+  padding: 14px 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.2s, background 0.2s;
+  cursor: pointer;
+  gap: 16px;
+}
+.favorite-place-card:hover {
+  box-shadow: 0 4px 16px rgba(27, 73, 101, 0.1);
+  background: #e9f1fa;
+}
+
+.favorite-place-image-wrapper {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #23405b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.favorite-place-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  background: #23405b;
+}
+
+.favorite-place-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.favorite-place-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #1b263b;
+}
+.favorite-place-access {
+  font-size: 0.97rem;
+  color: #555;
+}
+.favorite-place-rating {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #444;
+  margin-left: 12px;
+  flex-shrink: 0;
+  gap: 4px;
+}
+.favorite-place-star {
+  color: #f7b801;
+  font-size: 1.2em;
+}
+
+.favorite-place-address {
+  font-size: 0.97rem;
+  color: #888;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.favorite-place-totalrate {
+  font-size: 0.98em;
+  color: #888;
+  margin-left: 4px;
+  font-weight: 400;
+}
+
+.favorite-place-gallery {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  overflow-x: auto;
+  max-width: 120px;
+  min-width: 40px;
+  padding-bottom: 2px;
+  margin-right: 12px;
+}
+.favorite-place-gallery-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #23405b;
+  flex-shrink: 0;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  transition: transform 0.15s;
+}
+.favorite-place-gallery-img:hover {
+  transform: scale(1.08);
+}
+
+.favorite-place-stars {
+  margin-left: 6px;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+  color: #f7b801;
+  font-family: inherit;
+  vertical-align: middle;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .favorite-places-container {
+    max-width: 95vw;
+    padding: 18px 6px 24px 6px;
+  }
+  .favorite-places-title {
+    font-size: 1.5rem;
+  }
+  .favorite-place-image-wrapper {
+    width: 54px;
+    height: 54px;
+  }
+  .favorite-place-gallery {
+    max-width: 80px;
+  }
+  .favorite-place-gallery-img {
+    width: 32px;
+    height: 32px;
+  }
+}
+@media (max-width: 600px) {
+  .favorite-places-root {
+    padding: 0;
+    min-height: 100vh;
+  }
+  .favorite-places-container {
+    max-width: 100vw;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 10px 0 18px 0;
+    min-height: 100vh;
+  }
+  .favorite-places-title {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+  }
+  .favorite-places-list {
+    gap: 10px;
+    max-height: 70vh;
+  }
+  .favorite-place-card {
+    padding: 8px 8px;
+    gap: 10px;
+    border-radius: 10px;
+  }
+  .favorite-place-image-wrapper {
+    width: 40px;
+    height: 40px;
+  }
+  .favorite-place-name {
+    font-size: 1rem;
+  }
+  .favorite-place-access {
+    font-size: 0.9rem;
+  }
+  .favorite-place-rating {
+    font-size: 1rem;
+    margin-left: 6px;
+  }
+  .favorite-place-gallery {
+    max-width: 60px;
+    gap: 3px;
+  }
+  .favorite-place-gallery-img {
+    width: 24px;
+    height: 24px;
+    border-radius: 5px;
+  }
+  .favorite-place-address {
+    font-size: 0.85rem;
+  }
+  .favorite-place-totalrate {
+    font-size: 0.9em;
+  }
+}
